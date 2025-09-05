@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Quiz Hub</h1>
+    </header>
+
+    <main>
+        <div id="home">
+            <h2>Select Category</h2>
+            <button onclick="startQuiz('math')">Mathematics</button>
+            <button onclick="startQuiz('gk')">General Knowledge</button>
+        </div>
+
+        <div id="quiz" style="display:none;">
+            <div id="question-container"></div>
+            <div id="options-container"></div>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Your Score:</h2>
+            <p id="score"></p>
+            <button onclick="goHome()">Back to Home</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
