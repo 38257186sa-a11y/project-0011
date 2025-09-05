@@ -1,29 +1,33 @@
 let currentQuestionIndex = 0;
 let score = 0;
 let questions = [];
+let categories = {};
 
+// Initialize categories from external file (questions.js)
+function initCategories() {
+    categories = window.quizData || {}; // Load from questions.js
+    const categoryContainer = document.getElementById('category-buttons');
+    categoryContainer.innerHTML = '';
+
+    for (let cat in categories) {
+        const btn = document.createElement('button');
+        btn.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+        btn.onclick = () => startQuiz(cat);
+        categoryContainer.appendChild(btn);
+    }
+}
+
+// Start Quiz
 function startQuiz(category) {
     document.getElementById('home').style.display = 'none';
     document.getElementById('quiz').style.display = 'block';
     score = 0;
     currentQuestionIndex = 0;
-
-    // Placeholder questions; you can update dynamically later
-    if (category === 'math') {
-        questions = [
-            { question: "12 + 8 = ?", options: ["18","20","21","22"], answer: 1 },
-            { question: "5 * 6 = ?", options: ["11","30","35","25"], answer: 1 }
-        ];
-    } else if (category === 'gk') {
-        questions = [
-            { question: "Capital of France?", options: ["Paris","Rome","Berlin","Madrid"], answer: 0 },
-            { question: "Who discovered gravity?", options: ["Newton","Einstein","Galileo","Tesla"], answer: 0 }
-        ];
-    }
-
+    questions = [...(categories[category] || [])]; // clone array
     showQuestion();
 }
 
+// Display current question
 function showQuestion() {
     const q = questions[currentQuestionIndex];
     document.getElementById('question-container').textContent = q.question;
@@ -36,8 +40,11 @@ function showQuestion() {
         btn.onclick = () => selectAnswer(index);
         optionsContainer.appendChild(btn);
     });
+
+    document.getElementById('next-btn').style.display = 'none';
 }
 
+// Check answer
 function selectAnswer(selected) {
     if (selected === questions[currentQuestionIndex].answer) {
         score++;
@@ -45,10 +52,9 @@ function selectAnswer(selected) {
     document.getElementById('next-btn').style.display = 'inline-block';
 }
 
+// Next question or finish
 function nextQuestion() {
     currentQuestionIndex++;
-    document.getElementById('next-btn').style.display = 'none';
-
     if (currentQuestionIndex < questions.length) {
         showQuestion();
     } else {
@@ -56,13 +62,18 @@ function nextQuestion() {
     }
 }
 
+// Show final score
 function showResult() {
     document.getElementById('quiz').style.display = 'none';
     document.getElementById('result').style.display = 'block';
     document.getElementById('score').textContent = `${score} / ${questions.length}`;
 }
 
+// Go back to home
 function goHome() {
     document.getElementById('result').style.display = 'none';
     document.getElementById('home').style.display = 'block';
 }
+
+// Initialize categories on page load
+window.onload = initCategories;
