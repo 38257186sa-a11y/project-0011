@@ -3,9 +3,15 @@ let score = 0;
 let questions = [];
 let categories = {};
 
-// Initialize categories from external file (questions.js)
+// Merge questions from multiple external files
+const allData = {
+    ...window.quizData,
+    ...window.ugcNetData
+};
+
+// Initialize categories dynamically
 function initCategories() {
-    categories = window.quizData || {}; // Load from questions.js
+    categories = allData;
     const categoryContainer = document.getElementById('category-buttons');
     categoryContainer.innerHTML = '';
 
@@ -27,7 +33,7 @@ function startQuiz(category) {
     showQuestion();
 }
 
-// Display current question
+// Show question
 function showQuestion() {
     const q = questions[currentQuestionIndex];
     document.getElementById('question-container').textContent = q.question;
@@ -44,7 +50,7 @@ function showQuestion() {
     document.getElementById('next-btn').style.display = 'none';
 }
 
-// Check answer
+// Select answer
 function selectAnswer(selected) {
     if (selected === questions[currentQuestionIndex].answer) {
         score++;
@@ -62,7 +68,7 @@ function nextQuestion() {
     }
 }
 
-// Show final score
+// Show result
 function showResult() {
     document.getElementById('quiz').style.display = 'none';
     document.getElementById('result').style.display = 'block';
