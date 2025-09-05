@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Hub</title>
+    <title>Dynamic Quiz Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Quiz Hub</h1>
+        <h1>Dynamic Quiz Hub</h1>
     </header>
 
     <main>
+        <!-- Home Page -->
         <div id="home">
             <h2>Select Category</h2>
-            <button onclick="startQuiz('math')">Mathematics</button>
-            <button onclick="startQuiz('gk')">General Knowledge</button>
+            <div id="category-buttons"></div>
         </div>
 
+        <!-- Quiz Page -->
         <div id="quiz" style="display:none;">
             <div id="question-container"></div>
             <div id="options-container"></div>
             <button id="next-btn" onclick="nextQuestion()">Next</button>
         </div>
 
+        <!-- Result Page -->
         <div id="result" style="display:none;">
             <h2>Your Score:</h2>
             <p id="score"></p>
@@ -31,6 +33,8 @@
         </div>
     </main>
 
+    <!-- External JS -->
+    <script src="questions.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
