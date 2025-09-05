@@ -13,28 +13,29 @@
 
     <main>
         <!-- Home Page -->
-        <div id="home">
+        <section id="home" class="screen">
             <h2>Select Category</h2>
-            <div id="category-buttons"></div>
-        </div>
+            <div id="category-buttons" class="category-container"></div>
+        </section>
 
         <!-- Quiz Page -->
-        <div id="quiz" style="display:none;">
-            <div id="question-container"></div>
-            <div id="options-container"></div>
-            <button id="next-btn" onclick="nextQuestion()">Next</button>
-        </div>
+        <section id="quiz" class="screen" style="display:none;">
+            <div id="question-container" class="question-box"></div>
+            <div id="options-container" class="options-box"></div>
+            <button id="next-btn" class="primary-btn" onclick="nextQuestion()">Next</button>
+        </section>
 
         <!-- Result Page -->
-        <div id="result" style="display:none;">
+        <section id="result" class="screen" style="display:none;">
             <h2>Your Score:</h2>
-            <p id="score"></p>
-            <button onclick="goHome()">Back to Home</button>
-        </div>
+            <p id="score" class="score-text"></p>
+            <button class="primary-btn" onclick="goHome()">Back to Home</button>
+        </section>
     </main>
 
     <!-- External JS -->
     <script src="questions.js"></script>
+    <script src="ugcnet_questions.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
