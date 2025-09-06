@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Random Quiz — UGC NET Political Science</title>
+<style>
+  :root{--bg:#0b1220;--card:#07122a;--accent:#0ea5a4;--muted:#9aa6b2;--glass:rgba(255,255,255,0.03);}
+  body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#e6eef6;background:linear-gradient(180deg,#071021,#071728);margin:0;padding:18px;min-height:100vh;display:flex;align-items:flex-start;justify-content:center}
+  .wrap{width:100%;max-width:1100px}
+  header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+  header h1{font-size:18px;margin:0}
+  .card{background:linear-gradient(180deg,var(--card),#06101a);border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+  .controls{display:flex;gap:8px;align-items:center}
+  .btn{background:linear-gradient(90deg,var(--accent),#60a5fa);border:none;color:#042;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+  .meta{color:var(--muted);font-size:13px}
+  .layout{display:grid;grid-template-columns:1fr 320px;gap:14px;margin-top:12px}
+  @media (max-width:920px){.layout{grid-template-columns:1fr}}
+  .qbox{padding:14px;border-radius:10px;background:rgba(255,255,255,0.02)}
+  .qtitle{font-weight:700;margin:0 0 8px 0}
+  .options{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+  .option{background:transparent;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+  .option.selected{outline:2px solid rgba(14,165,164,0.14);background:linear-gradient(90deg, rgba(14,165,164,0.06), transparent)}
+  .hint{margin-top:10px;color:var(--muted);display:none}
+  .small{font-size:13px;color:var(--muted)}
+  .sidebar{display:flex;flex-direction:column;gap:10px}
+  .progress{height:10px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+  .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa);width:0%}
+  .footer{display:flex;gap:8px;align-items:center;margin-top:12px}
+  .toggle{display:inline-flex;align-items:center;gap:8px}
+  label.switch{position:relative;display:inline-block;width:46px;height:26px}
+  label.switch input{opacity:0;width:0;height:0}
+  .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#ccc;border-radius:26px;transition:.2s}
+  .slider:before{position:absolute;content:'';height:20px;width:20px;left:3px;bottom:3px;background:white;border-radius:50%;transition:.2s}
+  input:checked + .slider{background:var(--accent)}
+  input:checked + .slider:before{transform:translateX(20px)}
+  .muted{color:var(--muted)}
+  .danger{color:#ffb3b3}
+  .occupied{opacity:0.5;text-decoration:line-through}
+  .controls-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .kbd{background:rgba(255,255,255,0.03);padding:4px 8px;border-radius:6px;font-size:12px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Random Quiz Runner — UGC NET Political Science</h1>
+      <div class="controls">
+        <div class="meta">Pool: <strong id="pool-size">--</strong> questions</div>
+        <button id="startBtn" class="btn">Start Random Session (1000)</button>
+      </div>
+    </header>
+
+    <div class="card layout">
+      <main>
+        <div class="qbox card">
+          <div class="controls-row">
+            <div>
+              <div class="small">Question <strong id="currentIndex">0</strong> of <strong id="sessionTotal">0</strong></div>
+              <h2 class="qtitle" id="qtext">Click "Start Random Session" to begin.</h2>
+            </div>
+            <div style="text-align:right">
+              <div class="small">Timer</div>
+              <div id="timer" style="font-weight:700">--:--</div>
+            </div>
+          </div>
+
+          <div class="options" id="options"></div>
+
+          <div class="hint small" id="hint"></div>
+
+          <div class="footer">
+            <button id="prevBtn" class="btn ghost">Previous</button>
+            <button id="markOccupiedBtn" class="btn ghost">Occupy (exclude)</button>
+            <button id="nextBtn" class="btn">Next</button>
+            <div style="flex:1"></div>
+            <button id="refreshBtn" class="btn ghost">Refresh (reshuffle remaining)</button>
+            <button id="endBtn" class="btn ghost">End Session</button>
+          </div>
+        </div>
+
+        <div style="margin-top:12px" class="card small qbox">
+          <div class="small muted">Progress</div>
+          <div class="progress" aria-hidden style="margin-top:8px"><i id="progressBar"></i></div>
+          <div style="display:flex;justify-content:space-between;margin-top:8px">
+            <div class="small muted">Seen: <strong id="seenCount">0</strong></div>
+            <div class="small muted">Rem: <strong id="remCount">0</strong></div>
+          </div>
+          <div style="margin-top:8px" class="small muted">Break every 29 questions will prompt.</div>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="card qbox small">
+          <div class="small muted">Session length</div>
+          <select id="sessionLength" style="width:100%;padding:8px;margin-top:8px;border-radius:6px;background:transparent;border:1px solid rgba(255,255,255,0.03)">
+            <option value="1000">1000 (max)</option>
+            <option value="500">500</option>
+            <option value="200">200</option>
+            <option value="100" selected>100</option>
+            <option value="50">50</option>
+            <option value="20">20</option>
+          </select>
+
+          <div style="margin-top:10px" class="small muted">Per-question timer (seconds)</div>
+          <input id="perQTime" type="number" min="0" step="5" value="30" style="width:100%;padding:8px;border-radius:6px;background:transparent;border:1px solid rgba(255,255,255,0.03);margin-top:6px">
+
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <label class="file-label btn ghost" for="poolUpload">Upload pool (JSON)</label>
+            <input id="poolUpload" type="file" accept="application/json" style="display:none">
+            <button id="clearSeen" class="btn ghost">Clear Seen</button>
+          </div>
+
+          <hr style="border-color:rgba(255,255,255,0.03)">
+
+          <div class="small muted">Session Controls</div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button id="resumeBtn" class="btn ghost">Resume</button>
+            <button id="restartBtn" class="btn">Restart</button>
+          </div>
+
+          <hr style="border-color:rgba(255,255,255,0.03)">
+
+          <div>
+            <div class="small muted">Session storage</div>
+            <div class="small muted" style="margin-top:6px">Seen across sessions stored in <code>localStorage</code> key <code>rq_seen_ids</code></div>
+            <div style="margin-top:8px;display:flex;gap:8px">
+              <button id="exportSeen" class="btn ghost">Export Seen</button>
+              <button id="importSeen" class="btn ghost">Import Seen</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card qbox small">
+          <div class="small muted">Pool controls</div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button id="toggleOccupiedView" class="btn ghost">Toggle Occupied View</button>
+            <button id="showPool" class="btn ghost">Show Pool Stats</button>
+          </div>
+          <div id="poolInfo" style="margin-top:10px" class="small muted"></div>
+        </div>
+      </aside>
+    </div>
+
+  </div>
+
+<script>
+/*
+Random Quiz Engine
+- Expects a JSON pool file at /data/questions_pool.json (recommended)
+  OR you can upload a JSON via the file input.
+- Question object shape:
+  { "id": "unique-id-123", "question":"...", "options":["a","b","c","d"], "answer":1, "hint":"..." , "source":"paper/2004/quiz1" }
+- Features:
+  - Session length up to 1000 (or pool size)
+  - Break every 29 questions -> prompt to continue
+  - Refresh reshuffles remaining questions (no repeats within session)
+  - Persist seen IDs in localStorage 'rq_seen_ids' to avoid repeat across sessions
+  - Occupy/exclude question (mark so it won't be served)
+*/
+
+// --- UI references
+const startBtn = document.getElementById('startBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const refreshBtn = document.getElementById('refreshBtn');
+const endBtn = document.getElementById('endBtn');
+const markOccupiedBtn = document.getElementById('markOccupiedBtn');
+const qtext = document.getElementById('qtext');
+const optionsDiv = document.getElementById('options');
+const hintDiv = document.getElementById('hint');
+const currentIndexEl = document.getElementById('currentIndex');
+const sessionTotalEl = document.getElementById('sessionTotal');
+const poolSizeEl = document.getElementById('pool-size');
+const seenCountEl = document.getElementById('seenCount');
+const remCountEl = document.getElementById('remCount');
+const progressBar = document.getElementById('progressBar');
+const sessionLengthSelect = document.getElementById('sessionLength');
+const perQTimeInput = document.getElementById('perQTime');
+const poolUpload = document.getElementById('poolUpload');
+const poolInfo = document.getElementById('poolInfo');
+const resumeBtn = document.getElementById('resumeBtn');
+const restartBtn = document.getElementById('restartBtn');
+const clearSeenBtn = document.getElementById('clearSeen');
+const exportSeenBtn = document.getElementById('exportSeen');
+const importSeenBtn = document.getElementById('importSeen');
+const poolUploadLabel = document.querySelector('.file-label[for="poolUpload"]');
+const toggleOccupiedViewBtn = document.getElementById('toggleOccupiedView');
+const showPoolBtn = document.getElementById('showPool');
+const timerEl = document.getElementById('timer');
+
+// --- state
+let pool = []; // all questions
+let occupied = new Set(); // excluded ids
+let sessionQueue = []; // ordered ids for session
+let currentPos = -1; // index in sessionQueue
+let seenInSession = new Set(); // ids seen in this session
+let perQTime = 30; // seconds
+let perQTimer = null; // interval
+let secondsLeft = 0;
+let sessionLength = 100;
+let showOccupied = false;
+
+// localStorage keys
+const LS_SEEN_KEY = 'rq_seen_ids';
+const LS_OCC_KEY = 'rq_occupied_ids';
+const LS_SESSION_KEY = 'rq_current_session';
+
+// --- built-in fallback sample small pool (if no external file)
+const FALLBACK_POOL = (function(){
+  const years = [...Array(22)].map((_,i)=>2004+i);
+  const sample = [];
+  let idCounter = 1;
+  for (let y of years){
+    sample.push({ id: `y${y}`, year:y, question:`(${y}) Sample: Which thinker is associated with this concept?`, options:["A","B","C","D"], answer:0, hint:`This is a sample hint for ${y}`, source:`papers/${y}.html` });
+    idCounter++;
+  }
+  return sample;
+})();
+
+// --- helpers
+function setPoolInfo(){
+  poolSizeEl.textContent = pool.length;
+  seenCountEl.textContent = seenInSession.size;
+  remCountEl.textContent = Math.max(0, sessionQueue.length - (currentPos+1));
+  const percent = sessionQueue.length ? Math.round(((currentPos+1)/sessionQueue.length)*100) : 0;
+  progressBar.style.width = percent + '%';
+}
+
+function saveSeenToLocalStorage(){
+  try {
+    const existing = JSON.parse(localStorage.getItem(LS_SEEN_KEY) || '[]');
+    const merged = Array.from(new Set([...existing, ...Array.from(seenInSession)]));
+    localStorage.setItem(LS_SEEN_KEY, JSON.stringify(merged));
+  } catch(e){ console.warn("saveSeen err",e) }
+}
+
+function loadSeenFromLocalStorage(){
+  try {
+    const arr = JSON.parse(localStorage.getItem(LS_SEEN_KEY) || '[]');
+    return new Set(arr);
+  } catch(e){ return new Set() }
+}
+
+function saveOccupiedToLocalStorage(){
+  try {
+    localStorage.setItem(LS_OCC_KEY, JSON.stringify(Array.from(occupied)));
+  } catch(e){ console.warn(e) }
+}
+
+function loadOccupiedFromLocalStorage(){
+  try {
+    const arr = JSON.parse(localStorage.getItem(LS_OCC_KEY) || '[]');
+    return new Set(arr || []);
+  } catch(e){ return new Set() }
+}
+
+function uid() { return 'q_' + Math.random().toString(36).slice(2,9) }
+
+// fetch pool from /data/questions_pool.json
+async function fetchPool(){
+  try {
+    const resp = await fetch('/data/questions_pool.json', {cache:'no-cache'});
+    if (!resp.ok) throw new Error('no pool file');
+    const json = await resp.json();
+    if (!Array.isArray(json) || !json.length) throw new Error('invalid pool');
+    pool = json.map(q=>Object.assign({},q));
+    return;
+  } catch(e){
+    console.warn('fetchPool failed, using fallback',e);
+    pool = FALLBACK_POOL.slice();
+  }
+}
+
+// build session queue: pick random ids excluding occupied and already seen (if possible)
+function buildSessionQueue(){
+  const seenGlobal = loadSeenFromLocalStorage();
+  // candidate pool: filter out occupied
+  let candidates = pool.filter(q => !occupied.has(q.id));
+  // if many seen globally, we still include them but de-prioritize unseen
+  const unseen = candidates.filter(q => !seenGlobal.has(q.id));
+  const seen = candidates.filter(q => seenGlobal.has(q.id));
+
+  // session length chosen by user
+  sessionLength = Number(sessionLengthSelect.value) || 100;
+  const maxAvailable = candidates.length;
+  const desired = Math.min(sessionLength, maxAvailable);
+
+  // Build queue: try to use unseen first, then fill from seen
+  const pick = [];
+  shuffleArray(unseen);
+  shuffleArray(seen);
+  for (let q of unseen){
+    if (pick.length >= desired) break;
+    pick.push(q.id);
+  }
+  for (let q of seen){
+    if (pick.length >= desired) break;
+    pick.push(q.id);
+  }
+
+  // If still not enough (rare), allow occupied? no — we don't include occupied
+  shuffleArray(pick); // randomize order
+  sessionQueue = pick;
+  // Reset state
+  currentPos = -1;
+  seenInSession = new Set();
+  setPoolInfo();
+  // persist minimal session snapshot (so resume can work)
+  persistSession();
+  return sessionQueue.length;
+}
+
+// persist minimal session state to localStorage (resume capability)
+function persistSession(){
+  const payload = {
+    queue: sessionQueue,
+    pos: currentPos,
+    seen: Array.from(seenInSession)
+  };
+  try { localStorage.setItem(LS_SESSION_KEY, JSON.stringify(payload)); } catch(e){}
+}
+
+function restoreSession(){
+  try {
+    const raw = localStorage.getItem(LS_SESSION_KEY);
+    if (!raw) return false;
+    const obj = JSON.parse(raw);
+    if (!obj || !Array.isArray(obj.queue)) return false;
+    sessionQueue = obj.queue;
+    currentPos = obj.pos || -1;
+    seenInSession = new Set(obj.seen || []);
+    setPoolInfo();
+    return true;
+  } catch(e){ return false }
+}
+
+// utilities
+function shuffleArray(a){
+  for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+
+function getQuestionById(id){
+  return pool.find(q=>q.id===id);
+}
+
+// render current
+function renderCurrent(){
+  if (currentPos < 0 || currentPos >= sessionQueue.length){ qtext.textContent='No question loaded.'; optionsDiv.innerHTML=''; hintDiv.style.display='none'; currentIndexEl.textContent=0; sessionTotalEl.textContent = sessionQueue.length; setPoolInfo(); return; }
+  const qid = sessionQueue[currentPos];
+  const q = getQuestionById(qid);
+  if (!q){ qtext.textContent='Question not found (possibly removed).'; optionsDiv.innerHTML=''; hintDiv.style.display='none'; return; }
+  qtext.textContent = q.question || '(No text)';
+  // options
+  optionsDiv.innerHTML = '';
+  const opts = q.options || [];
+  opts.forEach((o, idx)=>{
+    const el = document.createElement('div');
+    el.className='option';
+    el.tabIndex=0;
+    el.textContent = `${String.fromCharCode(65+idx)}. ${o}`;
+    el.onclick = ()=> selectOption(idx);
+    el.onkeyup = (e)=> { if (e.key==='Enter') selectOption(idx); };
+    optionsDiv.appendChild(el);
+  });
+  hintDiv.style.display = 'none';
+  hintDiv.textContent = q.hint || '';
+  currentIndexEl.textContent = currentPos+1;
+  sessionTotalEl.textContent = sessionQueue.length;
+  setPoolInfo();
+  // update occupied button label
+  markOccupiedBtn.textContent = occupied.has(qid) ? 'Un-occupy' : 'Occupy (exclude)';
+  // start per-question timer
+  startQuestionTimer();
+}
+
+function selectOption(idx){
+  // simple immediate feedback: mark selected visually
+  const nodes = optionsDiv.querySelectorAll('.option');
+  nodes.forEach((n,i)=> n.classList.toggle('selected', i===idx));
+}
+
+// next, prev
+function moveNext(){
+  if (currentPos+1 >= sessionQueue.length){
+    alert('End of session reached.');
+    finishSession();
+    return;
+  }
+  currentPos++;
+  const qid = sessionQueue[currentPos];
+  seenInSession.add(qid);
+  // after seeing 29, break prompt
+  if (seenInSession.size % 29 === 0 && seenInSession.size !== 0){
+    // pause and ask
+    if (!confirm(`You have attempted ${seenInSession.size} questions. Do you want to continue?`)) {
+      // step back so user can resume later
+      currentPos--;
+      persistSession();
+      saveSeenToLocalStorage();
+      return;
+    }
+  }
+  renderCurrent();
+  persistSession();
+  setPoolInfo();
+  // persist seen across sessions gradually
+  saveSeenToLocalStorage();
+}
+
+function movePrev(){
+  if (currentPos-1 < 0) { alert('Already at start'); return; }
+  currentPos--;
+  renderCurrent();
+  persistSession();
+}
+
+// finish
+function finishSession(){
+  // clean up timer + save seen
+  stopQuestionTimer();
+  saveSeenToLocalStorage();
+  alert('Session ended. Seen questions have been saved to storage (unless you cleared them).');
+}
+
+// start / restart
+async function startSession(){
+  perQTime = Math.max(0, Number(perQTimeInput.value) || 30);
+  // load pool if empty
+  if (!pool.length) await fetchPool();
+  // load occupied from storage
+  occupied = loadOccupiedFromLocalStorage();
+  // build queue
+  const count = buildSessionQueue();
+  if (count === 0){
+    alert('No available questions in the pool (all may be occupied).');
+    return;
+  }
+  // limit to session length
+  // set initial to first
+  currentPos = -1;
+  moveNext();
+}
+
+// restart: rebuild queue (keeps seen in local storage)
+function restartSession(){
+  if (!confirm('Restart session: this will build a fresh queue (seen across sessions still persist). Continue?')) return;
+  buildSessionQueue();
+  currentPos = -1;
+  seenInSession = new Set();
+  persistSession();
+  moveNext();
+}
+
+// refresh / reshuffle remaining
+function refreshRemaining(){
+  if (currentPos < 0) { alert('No active session'); return; }
+  const remaining = sessionQueue.slice(currentPos+1);
+  shuffleArray(remaining);
+  sessionQueue = sessionQueue.slice(0, currentPos+1).concat(remaining);
+  persistSession();
+  alert('Remaining questions reshuffled.');
+}
+
+// occupy / un-occupy current
+function toggleOccupyCurrent(){
+  if (currentPos < 0) return;
+  const qid = sessionQueue[currentPos];
+  if (!qid) return;
+  if (occupied.has(qid)){
+    occupied.delete(qid);
+    alert('Question un-occupied and is now eligible.');
+  } else {
+    occupied.add(qid);
+    alert('Question occupied (excluded) — it will not be served in future sessions until un-occupied.');
+  }
+  saveOccupiedToLocalStorage();
+  markOccupiedBtn.textContent = occupied.has(qid) ? 'Un-occupy' : 'Occupy (exclude)';
+}
+
+// upload pool (local file)
+poolUpload.addEventListener('change', async (e)=>{
+  const f = e.target.files[0];
+  if (!f) return;
+  try {
+    const txt = await f.text();
+    const parsed = JSON.parse(txt);
+    if (!Array.isArray(parsed)) throw new Error('JSON must be an array of question objects');
+    // basic validation & normalizing ids
+    parsed.forEach((q, i)=> { if (!q.id) q.id = q.id || ('u'+i+'_'+(q.year||'x')); });
+    pool = parsed.slice();
+    alert(`Loaded pool from file: ${pool.length} questions.`);
+    setPoolInfo();
+  } catch(err){
+    alert('Failed to load pool: ' + err.message);
+  }
+  e.target.value = '';
+});
+
+// UI wiring
+startBtn.addEventListener('click', ()=> startSession());
+nextBtn.addEventListener('click', ()=> moveNext());
+prevBtn.addEventListener('click', ()=> movePrev());
+refreshBtn.addEventListener('click', ()=> { if (confirm('Reshuffle remaining questions?')) refreshRemaining(); });
+endBtn.addEventListener('click', ()=> { if (confirm('End session now?')) finishSession(); });
+markOccupiedBtn.addEventListener('click', ()=> { toggleOccupyCurrent(); });
+
+restartBtn.addEventListener('click', ()=> restartSession());
+resumeBtn.addEventListener('click', ()=> {
+  if (restoreSession()){
+    alert('Session restored. Click Resume -> Next to continue.');
+    renderCurrent();
+  } else {
+    alert('No saved session to resume.');
+  }
+});
+
+clearSeenBtn.addEventListener('click', ()=> {
+  if (!confirm('Clear globally seen questions stored in localStorage? This will allow repetition across sessions.')) return;
+  localStorage.removeItem(LS_SEEN_KEY);
+  seenInSession = new Set();
+  setPoolInfo();
+  alert('Cleared.');
+});
+
+exportSeenBtn.addEventListener('click', ()=> {
+  try {
+    const data = localStorage.getItem(LS_SEEN_KEY) || '[]';
+    const blob = new Blob([data], {type:'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = 'seen_ids.json'; a.click();
+    URL.revokeObjectURL(url);
+  } catch(e){ alert('Export failed'); }
+});
+
+importSeenBtn.addEventListener('click', ()=> {
+  const txt = prompt('Paste JSON array of seen ids (e.g. ["q1","q2"])');
+  if (!txt) return;
+  try {
+    const arr = JSON.parse(txt);
+    if (!Array.isArray(arr)) throw new Error('Not array');
+    localStorage.setItem(LS_SEEN_KEY, JSON.stringify(arr));
+    alert('Imported seen ids. They will be avoided in future sessions.');
+  } catch(e){ alert('Invalid JSON: ' + e.message); }
+});
+
+toggleOccupiedViewBtn.addEventListener('click', ()=> {
+  showOccupied = !showOccupied;
+  if (showOccupied) toggleOccupiedViewBtn.textContent = 'Hide Occupied View';
+  else toggleOccupiedViewBtn.textContent = 'Toggle Occupied View';
+  // display pool info
+  showPoolStats();
+});
+
+showPoolBtn.addEventListener('click', ()=> showPoolStats());
+
+function showPoolStats(){
+  const occArr = Array.from(occupied);
+  poolInfo.innerHTML = `
+    <div>Pool total: <strong>${pool.length}</strong></div>
+    <div>Occupied (excluded): <strong>${occArr.length}</strong></div>
+    <div>Session queue size: <strong>${sessionQueue.length}</strong></div>
+  `;
+  if (showOccupied && occArr.length){
+    poolInfo.innerHTML += `<div style="margin-top:8px" class="small muted">Occupied IDs: ${occArr.join(', ')}</div>`;
+  }
+}
+
+// timer functions
+function startQuestionTimer(){
+  stopQuestionTimer();
+  perQTime = Math.max(0, Number(perQTimeInput.value) || 30);
+  if (perQTime <= 0) { timerEl.textContent = '--:--'; return; }
+  secondsLeft = perQTime;
+  timerEl.textContent = formatTime(secondsLeft);
+  perQTimer = setInterval(()=>{
+    secondsLeft--;
+    timerEl.textContent = formatTime(secondsLeft);
+    if (secondsLeft <= 0){
+      stopQuestionTimer();
+      // auto move next
+      if (confirm('Time up for this question. Move to next?')) moveNext();
+    }
+  }, 1000);
+}
+function stopQuestionTimer(){ if (perQTimer) { clearInterval(perQTimer); perQTimer=null; } }
+function formatTime(s){ const m = Math.floor(s/60); const sec = s%60; return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}` }
+
+// initial load
+(async function init(){
+  // try to fetch pool; if fails, fallback sample
+  await fetchPool();
+  // load occupied from storage
+  occupied = loadOccupiedFromLocalStorage();
+  setPoolInfo();
+  poolInfo.textContent = 'Upload your /data/questions_pool.json or use the upload control.';
+})();
+</script>
+</body>
+</html>
