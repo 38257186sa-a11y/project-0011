@@ -1,0 +1,1073 @@
+[
+  {
+    "id": "q2024_001",
+    "year": 2024,
+    "question": "Who is considered the father of modern psychology?",
+    "options": ["William James", "Wilhelm Wundt", "Sigmund Freud", "B.F. Skinner"],
+    "answer": 1,
+    "hint": "Established the first psychology laboratory in Leipzig in 1879.",
+    "subject": "Psychology",
+    "source": "papers/2024_psychology.html"
+  },
+  {
+    "id": "q2024_002",
+    "year": 2024,
+    "question": "The concept of 'Panchatantra' belongs to which genre of literature?",
+    "options": ["Epic poetry", "Fable literature", "Romantic poetry", "Modern drama"],
+    "answer": 1,
+    "hint": "Collection of animal stories with moral lessons.",
+    "subject": "Literature",
+    "source": "papers/2024_literature.html"
+  },
+  {
+    "id": "q2024_003",
+    "year": 2024,
+    "question": "Which of the following is NOT a characteristic of qualitative research?",
+    "options": ["Statistical generalization", "Contextual understanding", "Inductive reasoning", "Subjective interpretation"],
+    "answer": 0,
+    "hint": "Qualitative research focuses on depth rather than breadth.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_research.html"
+  },
+  {
+    "id": "q2024_004",
+    "year": 2024,
+    "question": "The term 'Pedagogy of the Oppressed' was coined by?",
+    "options": ["John Dewey", "Paulo Freire", "Maria Montessori", "Jean Piaget"],
+    "answer": 1,
+    "hint": "Brazilian educator and philosopher.",
+    "subject": "Education",
+    "source": "papers/2024_education.html"
+  },
+  {
+    "id": "q2024_005",
+    "year": 2024,
+    "question": "In Indian philosophy, 'Maya' refers to?",
+    "options": ["Ultimate reality", "Illusion or appearance", "Cosmic energy", "Divine consciousness"],
+    "answer": 1,
+    "hint": "Central concept in Advaita Vedanta.",
+    "subject": "Philosophy",
+    "source": "papers/2024_philosophy.html"
+  },
+  {
+    "id": "q2024_006",
+    "year": 2024,
+    "question": "The Green Revolution in India was initiated during which decade?",
+    "options": ["1950s", "1960s", "1970s", "1980s"],
+    "answer": 1,
+    "hint": "Associated with high-yielding variety seeds and M.S. Swaminathan.",
+    "subject": "Economics",
+    "source": "papers/2024_economics.html"
+  },
+  {
+    "id": "q2024_007",
+    "year": 2024,
+    "question": "Which statistical measure is most affected by extreme values?",
+    "options": ["Median", "Mode", "Mean", "Range"],
+    "answer": 2,
+    "hint": "Average of all values in a dataset.",
+    "subject": "Statistics",
+    "source": "papers/2024_statistics.html"
+  },
+  {
+    "id": "q2024_008",
+    "year": 2024,
+    "question": "The concept of 'Cultural Hegemony' was developed by?",
+    "options": ["Karl Marx", "Antonio Gramsci", "Max Weber", "Emile Durkheim"],
+    "answer": 1,
+    "hint": "Italian Marxist theorist imprisoned by Mussolini.",
+    "subject": "Political Science",
+    "source": "papers/2024_political_science.html"
+  },
+  {
+    "id": "q2024_009",
+    "year": 2024,
+    "question": "In computer networks, what does TCP stand for?",
+    "options": ["Transfer Control Protocol", "Transmission Control Protocol", "Transport Control Protocol", "Terminal Control Protocol"],
+    "answer": 1,
+    "hint": "Ensures reliable data transmission over networks.",
+    "subject": "Computer Science",
+    "source": "papers/2024_computer_science.html"
+  },
+  {
+    "id": "q2024_010",
+    "year": 2024,
+    "question": "The theory of 'Structuralism' in linguistics is associated with?",
+    "options": ["Noam Chomsky", "Ferdinand de Saussure", "Leonard Bloomfield", "Roman Jakobson"],
+    "answer": 1,
+    "hint": "Swiss linguist who distinguished between langue and parole.",
+    "subject": "Linguistics",
+    "source": "papers/2024_linguistics.html"
+  },
+  {
+    "id": "q2024_011",
+    "year": 2024,
+    "question": "Which Indian classical dance form originated in Kerala?",
+    "options": ["Bharatanatyam", "Kathakali", "Odissi", "Manipuri"],
+    "answer": 1,
+    "hint": "Known for elaborate makeup and dramatic expressions.",
+    "subject": "Performing Arts",
+    "source": "papers/2024_arts.html"
+  },
+  {
+    "id": "q2024_012",
+    "year": 2024,
+    "question": "The concept of 'Sustainable Development' was popularized by which report?",
+    "options": ["Club of Rome Report", "Brundtland Report", "Stockholm Report", "Rio Report"],
+    "answer": 1,
+    "hint": "Our Common Future report published in 1987.",
+    "subject": "Environmental Science",
+    "source": "papers/2024_environment.html"
+  },
+  {
+    "id": "q2024_013",
+    "year": 2024,
+    "question": "In research methodology, what is a 'Type I Error'?",
+    "options": ["Accepting a false null hypothesis", "Rejecting a true null hypothesis", "Using wrong sample size", "Incorrect data collection"],
+    "answer": 1,
+    "hint": "Also known as false positive or alpha error.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_research_advanced.html"
+  },
+  {
+    "id": "q2024_014",
+    "year": 2024,
+    "question": "The doctrine of 'Anekantavada' is central to which philosophy?",
+    "options": ["Buddhism", "Jainism", "Hinduism", "Sikhism"],
+    "answer": 1,
+    "hint": "Non-absolutism or multiplicity of viewpoints.",
+    "subject": "Indian Philosophy",
+    "source": "papers/2024_indian_philosophy.html"
+  },
+  {
+    "id": "q2024_015",
+    "year": 2024,
+    "question": "Which of the following is a measure of central tendency?",
+    "options": ["Standard deviation", "Variance", "Median", "Range"],
+    "answer": 2,
+    "hint": "Middle value when data is arranged in order.",
+    "subject": "Statistics",
+    "source": "papers/2024_statistics_basic.html"
+  },
+  {
+    "id": "q2024_016",
+    "year": 2024,
+    "question": "The term 'Postmodernism' in literature is characterized by?",
+    "options": ["Linear narrative", "Objective reality", "Fragmentation and metafiction", "Romantic idealism"],
+    "answer": 2,
+    "hint": "Questions grand narratives and absolute truths.",
+    "subject": "Literature",
+    "source": "papers/2024_modern_literature.html"
+  },
+  {
+    "id": "q2024_017",
+    "year": 2024,
+    "question": "Who propounded the theory of 'Multiple Intelligences'?",
+    "options": ["Jean Piaget", "Howard Gardner", "Jerome Bruner", "Lev Vygotsky"],
+    "answer": 1,
+    "hint": "Harvard psychologist who identified eight types of intelligence.",
+    "subject": "Education",
+    "source": "papers/2024_educational_psychology.html"
+  },
+  {
+    "id": "q2024_018",
+    "year": 2024,
+    "question": "In Indian classical music, what is a 'Raga'?",
+    "options": ["Musical instrument", "Melodic framework", "Rhythmic pattern", "Dance form"],
+    "answer": 1,
+    "hint": "Consists of ascending and descending note patterns.",
+    "subject": "Music",
+    "source": "papers/2024_indian_music.html"
+  },
+  {
+    "id": "q2024_019",
+    "year": 2024,
+    "question": "The concept of 'Digital Divide' refers to?",
+    "options": ["Software piracy", "Gap in access to technology", "Computer virus", "Network security"],
+    "answer": 1,
+    "hint": "Inequality in access to digital technologies.",
+    "subject": "Mass Communication",
+    "source": "papers/2024_communication.html"
+  },
+  {
+    "id": "q2024_020",
+    "year": 2024,
+    "question": "Which sampling technique ensures every member has equal chance of selection?",
+    "options": ["Purposive sampling", "Simple random sampling", "Snowball sampling", "Quota sampling"],
+    "answer": 1,
+    "hint": "Most basic form of probability sampling.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_sampling.html"
+  },
+  {
+    "id": "q2024_021",
+    "year": 2024,
+    "question": "The 'Frankfurt School' is associated with?",
+    "options": ["Logical positivism", "Critical theory", "Phenomenology", "Existentialism"],
+    "answer": 1,
+    "hint": "Critique of instrumental reason and culture industry.",
+    "subject": "Sociology",
+    "source": "papers/2024_sociology.html"
+  },
+  {
+    "id": "q2024_022",
+    "year": 2024,
+    "question": "In computer science, what does 'Algorithm' mean?",
+    "options": ["Computer program", "Step-by-step procedure", "Database query", "Network protocol"],
+    "answer": 1,
+    "hint": "Finite sequence of instructions to solve a problem.",
+    "subject": "Computer Science",
+    "source": "papers/2024_algorithms.html"
+  },
+  {
+    "id": "q2024_023",
+    "year": 2024,
+    "question": "The concept of 'Dharma' in Indian philosophy primarily means?",
+    "options": ["Religion", "Righteous duty", "Worship", "Meditation"],
+    "answer": 1,
+    "hint": "Cosmic order and individual duty combined.",
+    "subject": "Philosophy",
+    "source": "papers/2024_dharma.html"
+  },
+  {
+    "id": "q2024_024",
+    "year": 2024,
+    "question": "Which research design is best for establishing causality?",
+    "options": ["Descriptive", "Correlational", "Experimental", "Survey"],
+    "answer": 2,
+    "hint": "Involves manipulation of variables and control groups.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_experimental_design.html"
+  },
+  {
+    "id": "q2024_025",
+    "year": 2024,
+    "question": "The term 'Hermeneutics' refers to?",
+    "options": ["Mathematical logic", "Theory of interpretation", "Scientific method", "Statistical analysis"],
+    "answer": 1,
+    "hint": "Art and science of textual interpretation.",
+    "subject": "Philosophy",
+    "source": "papers/2024_hermeneutics.html"
+  },
+  {
+    "id": "q2024_026",
+    "year": 2024,
+    "question": "In Indian art, what is 'Miniature painting'?",
+    "options": ["Large wall murals", "Small detailed paintings", "Sculpture work", "Textile art"],
+    "answer": 1,
+    "hint": "Flourished in Mughal and Rajasthani courts.",
+    "subject": "Fine Arts",
+    "source": "papers/2024_indian_art.html"
+  },
+  {
+    "id": "q2024_027",
+    "year": 2024,
+    "question": "The concept of 'Operant Conditioning' was developed by?",
+    "options": ["Ivan Pavlov", "B.F. Skinner", "John Watson", "Albert Bandura"],
+    "answer": 1,
+    "hint": "Learning through consequences of behavior.",
+    "subject": "Psychology",
+    "source": "papers/2024_behaviorism.html"
+  },
+  {
+    "id": "q2024_028",
+    "year": 2024,
+    "question": "Which is the oldest Veda?",
+    "options": ["Samaveda", "Yajurveda", "Atharvaveda", "Rigveda"],
+    "answer": 3,
+    "hint": "Contains hymns to various deities.",
+    "subject": "Ancient Literature",
+    "source": "papers/2024_vedic_literature.html"
+  },
+  {
+    "id": "q2024_029",
+    "year": 2024,
+    "question": "In statistics, what does 'p-value' indicate?",
+    "options": ["Population size", "Probability of significance", "Sample variance", "Mean difference"],
+    "answer": 1,
+    "hint": "Measure of evidence against null hypothesis.",
+    "subject": "Statistics",
+    "source": "papers/2024_inferential_statistics.html"
+  },
+  {
+    "id": "q2024_030",
+    "year": 2024,
+    "question": "The theory of 'Social Construction of Reality' was proposed by?",
+    "options": ["Peter Berger and Thomas Luckmann", "Emile Durkheim", "Max Weber", "Talcott Parsons"],
+    "answer": 0,
+    "hint": "How social phenomena develop in social contexts.",
+    "subject": "Sociology",
+    "source": "papers/2024_social_theory.html"
+  },
+  {
+    "id": "q2024_031",
+    "year": 2024,
+    "question": "Which learning theory emphasizes the role of observation and imitation?",
+    "options": ["Classical conditioning", "Operant conditioning", "Social learning theory", "Gestalt theory"],
+    "answer": 2,
+    "hint": "Albert Bandura's contribution to learning psychology.",
+    "subject": "Education",
+    "source": "papers/2024_learning_theories.html"
+  },
+  {
+    "id": "q2024_032",
+    "year": 2024,
+    "question": "The concept of 'Orientalism' was critiqued by?",
+    "options": ["Michel Foucault", "Edward Said", "Jacques Derrida", "Jean Baudrillard"],
+    "answer": 1,
+    "hint": "Palestinian-American literary theorist and cultural critic.",
+    "subject": "Cultural Studies",
+    "source": "papers/2024_postcolonial_theory.html"
+  },
+  {
+    "id": "q2024_033",
+    "year": 2024,
+    "question": "In research, what is 'Reliability'?",
+    "options": ["Accuracy of results", "Consistency of measurement", "Relevance of study", "Statistical significance"],
+    "answer": 1,
+    "hint": "Degree to which results are repeatable.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_measurement.html"
+  },
+  {
+    "id": "q2024_034",
+    "year": 2024,
+    "question": "The 'Chipko Movement' was related to?",
+    "options": ["Women's rights", "Forest conservation", "Labor rights", "Land reforms"],
+    "answer": 1,
+    "hint": "Tree-hugging movement in Uttarakhand.",
+    "subject": "Environmental Studies",
+    "source": "papers/2024_environmental_movements.html"
+  },
+  {
+    "id": "q2024_035",
+    "year": 2024,
+    "question": "In Indian classical dance, 'Mudras' refer to?",
+    "options": ["Costume designs", "Hand gestures", "Musical instruments", "Stage decorations"],
+    "answer": 1,
+    "hint": "Symbolic hand positions conveying meaning.",
+    "subject": "Performing Arts",
+    "source": "papers/2024_dance_forms.html"
+  },
+  {
+    "id": "q2024_036",
+    "year": 2024,
+    "question": "The concept of 'Phenomenology' in philosophy was developed by?",
+    "options": ["Martin Heidegger", "Edmund Husserl", "Maurice Merleau-Ponty", "Jean-Paul Sartre"],
+    "answer": 1,
+    "hint": "Study of consciousness and experience.",
+    "subject": "Philosophy",
+    "source": "papers/2024_phenomenology.html"
+  },
+  {
+    "id": "q2024_037",
+    "year": 2024,
+    "question": "Which is NOT a characteristic of scientific method?",
+    "options": ["Objectivity", "Subjectivity", "Reproducibility", "Falsifiability"],
+    "answer": 1,
+    "hint": "Science aims to minimize personal bias.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_scientific_method.html"
+  },
+  {
+    "id": "q2024_038",
+    "year": 2024,
+    "question": "The 'Sapir-Whorf Hypothesis' is related to?",
+    "options": ["Language and thought", "Memory and cognition", "Perception and reality", "Culture and society"],
+    "answer": 0,
+    "hint": "Linguistic relativity principle.",
+    "subject": "Linguistics",
+    "source": "papers/2024_psycholinguistics.html"
+  },
+  {
+    "id": "q2024_039",
+    "year": 2024,
+    "question": "In computer science, what is 'Big O Notation' used for?",
+    "options": ["Data storage", "Algorithm complexity", "Network speed", "Memory allocation"],
+    "answer": 1,
+    "hint": "Describes algorithm efficiency in terms of input size.",
+    "subject": "Computer Science",
+    "source": "papers/2024_complexity_theory.html"
+  },
+  {
+    "id": "q2024_040",
+    "year": 2024,
+    "question": "The concept of 'Catharsis' in literature was introduced by?",
+    "options": ["Plato", "Aristotle", "Sophocles", "Euripides"],
+    "answer": 1,
+    "hint": "Purification of emotions through tragedy.",
+    "subject": "Literature",
+    "source": "papers/2024_literary_theory.html"
+  },
+  {
+    "id": "q2024_041",
+    "year": 2024,
+    "question": "Which statistical test is used to compare means of three or more groups?",
+    "options": ["t-test", "Chi-square test", "ANOVA", "Correlation"],
+    "answer": 2,
+    "hint": "Analysis of Variance.",
+    "subject": "Statistics",
+    "source": "papers/2024_statistical_tests.html"
+  },
+  {
+    "id": "q2024_042",
+    "year": 2024,
+    "question": "The theory of 'Constructivism' in education emphasizes?",
+    "options": ["Passive learning", "Active knowledge construction", "Rote memorization", "Teacher-centered approach"],
+    "answer": 1,
+    "hint": "Learners build understanding through experience.",
+    "subject": "Education",
+    "source": "papers/2024_constructivism.html"
+  },
+  {
+    "id": "q2024_043",
+    "year": 2024,
+    "question": "In Indian philosophy, 'Moksha' refers to?",
+    "options": ["Material prosperity", "Liberation from cycle of rebirth", "Social status", "Religious ritual"],
+    "answer": 1,
+    "hint": "Ultimate spiritual goal in Hinduism.",
+    "subject": "Philosophy",
+    "source": "papers/2024_moksha.html"
+  },
+  {
+    "id": "q2024_044",
+    "year": 2024,
+    "question": "The concept of 'Agenda Setting' in mass communication suggests?",
+    "options": ["Media creates opinions", "Media influences what people think about", "Media has no influence", "Media only entertains"],
+    "answer": 1,
+    "hint": "Media doesn't tell what to think, but what to think about.",
+    "subject": "Mass Communication",
+    "source": "papers/2024_media_theory.html"
+  },
+  {
+    "id": "q2024_045",
+    "year": 2024,
+    "question": "Which research approach uses inductive reasoning?",
+    "options": ["Quantitative", "Qualitative", "Experimental", "Survey"],
+    "answer": 1,
+    "hint": "Moves from specific observations to general theories.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_qualitative_research.html"
+  },
+  {
+    "id": "q2024_046",
+    "year": 2024,
+    "question": "The 'Rashomon Effect' refers to?",
+    "options": ["Memory distortion", "Subjective interpretation of events", "Optical illusion", "Statistical error"],
+    "answer": 1,
+    "hint": "Same event described differently by different observers.",
+    "subject": "Psychology",
+    "source": "papers/2024_cognitive_psychology.html"
+  },
+  {
+    "id": "q2024_047",
+    "year": 2024,
+    "question": "In Indian art, what is 'Warli painting'?",
+    "options": ["Mughal art", "Tribal folk art", "Temple sculpture", "Modern painting"],
+    "answer": 1,
+    "hint": "Tribal art from Maharashtra using geometric patterns.",
+    "subject": "Fine Arts",
+    "source": "papers/2024_folk_art.html"
+  },
+  {
+    "id": "q2024_048",
+    "year": 2024,
+    "question": "The concept of 'Deconstruction' in literary theory was developed by?",
+    "options": ["Roland Barthes", "Michel Foucault", "Jacques Derrida", "Julia Kristeva"],
+    "answer": 2,
+    "hint": "French philosopher who challenged binary oppositions.",
+    "subject": "Literature",
+    "source": "papers/2024_deconstruction.html"
+  },
+  {
+    "id": "q2024_049",
+    "year": 2024,
+    "question": "In statistics, what does 'Standard Deviation' measure?",
+    "options": ["Central tendency", "Spread of data", "Relationship between variables", "Sample size"],
+    "answer": 1,
+    "hint": "Average distance from the mean.",
+    "subject": "Statistics",
+    "source": "papers/2024_descriptive_statistics.html"
+  },
+  {
+    "id": "q2024_050",
+    "year": 2024,
+    "question": "The 'Critical Period Hypothesis' in language acquisition suggests?",
+    "options": ["Language can be learned at any age", "There's an optimal period for language learning", "Adults learn faster than children", "Language learning is impossible after puberty"],
+    "answer": 1,
+    "hint": "Eric Lenneberg's theory about optimal age for language acquisition.",
+    "subject": "Linguistics",
+    "source": "papers/2024_language_acquisition.html"
+  },
+  {
+    "id": "q2024_051",
+    "year": 2024,
+    "question": "Which philosophical school emphasizes 'the greatest good for the greatest number'?",
+    "options": ["Deontology", "Utilitarianism", "Virtue ethics", "Existentialism"],
+    "answer": 1,
+    "hint": "Jeremy Bentham and John Stuart Mill's ethical theory.",
+    "subject": "Philosophy",
+    "source": "papers/2024_ethics.html"
+  },
+  {
+    "id": "q2024_052",
+    "year": 2024,
+    "question": "In computer networks, what does 'IP' in IP address stand for?",
+    "options": ["Internet Protocol", "Internal Processing", "Information Packet", "Input Parameter"],
+    "answer": 0,
+    "hint": "Protocol governing internet communication.",
+    "subject": "Computer Science",
+    "source": "papers/2024_networking.html"
+  },
+  {
+    "id": "q2024_053",
+    "year": 2024,
+    "question": "The concept of 'Symbolic Interactionism' was developed by?",
+    "options": ["George Herbert Mead", "Talcott Parsons", "Max Weber", "Emile Durkheim"],
+    "answer": 0,
+    "hint": "Focus on symbols and meanings in social interaction.",
+    "subject": "Sociology",
+    "source": "papers/2024_symbolic_interactionism.html"
+  },
+  {
+    "id": "q2024_054",
+    "year": 2024,
+    "question": "In research, what is 'Triangulation'?",
+    "options": ["Using three variables", "Three research methods", "Multiple approaches for validation", "Statistical technique"],
+    "answer": 2,
+    "hint": "Using multiple sources or methods to enhance credibility.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_triangulation.html"
+  },
+  {
+    "id": "q2024_055",
+    "year": 2024,
+    "question": "The 'Double Helix' model of DNA was proposed by?",
+    "options": ["Gregor Mendel", "Charles Darwin", "Watson and Crick", "Rosalind Franklin"],
+    "answer": 2,
+    "hint": "1953 discovery that revolutionized biology.",
+    "subject": "Life Sciences",
+    "source": "papers/2024_molecular_biology.html"
+  },
+  {
+    "id": "q2024_056",
+    "year": 2024,
+    "question": "In Indian classical music, what is 'Tala'?",
+    "options": ["Melody", "Rhythm", "Scale", "Instrument"],
+    "answer": 1,
+    "hint": "Rhythmic framework in Indian music.",
+    "subject": "Music",
+    "source": "papers/2024_rhythm.html"
+  },
+  {
+    "id": "q2024_057",
+    "year": 2024,
+    "question": "The concept of 'Glocalization' refers to?",
+    "options": ["Global standardization", "Local adaptation of global products", "Anti-globalization", "Economic nationalism"],
+    "answer": 1,
+    "hint": "Think globally, act locally principle.",
+    "subject": "Sociology",
+    "source": "papers/2024_globalization.html"
+  },
+  {
+    "id": "q2024_058",
+    "year": 2024,
+    "question": "Which learning style theory suggests students have preferred ways of processing information?",
+    "options": ["Multiple Intelligence Theory", "VAK Learning Styles", "Bloom's Taxonomy", "Maslow's Hierarchy"],
+    "answer": 1,
+    "hint": "Visual, Auditory, and Kinesthetic preferences.",
+    "subject": "Education",
+    "source": "papers/2024_learning_styles.html"
+  },
+  {
+    "id": "q2024_059",
+    "year": 2024,
+    "question": "In philosophy, 'Epistemology' is the study of?",
+    "options": ["Ethics", "Knowledge", "Reality", "Beauty"],
+    "answer": 1,
+    "hint": "Theory of knowledge and justified belief.",
+    "subject": "Philosophy",
+    "source": "papers/2024_epistemology.html"
+  },
+  {
+    "id": "q2024_060",
+    "year": 2024,
+    "question": "The 'Hawthorne Effect' in research refers to?",
+    "options": ["Measurement error", "Change in behavior due to observation", "Statistical bias", "Sampling error"],
+    "answer": 1,
+    "hint": "People modify behavior when they know they're being studied.",
+    "subject": "Research Methodology",
+    "source": "papers/2024_research_effects.html"
+  },
+  {
+    "id": "q2024_061",
+    "year": 2024,
+    "question": "Which Indian emperor is known for spreading Buddhism?",
+    "options": ["Chandragupta Maurya", "Ashoka", "Harsha", "Kanishka"],
+    "answer": 1,
+    "hint": "Mauryan emperor who converted after Kalinga war.",
+    "subject": "History",
+    "source": "papers/2024_ancient_history.html"
+  },
+  {
+    "id": "q2024_062",
+    "year": 2024,
+    "question": "In statistics, what is 'Null Hypothesis'?",
+    "options": ["Statement of no effect", "Alternative explanation", "Research prediction", "Statistical error"],
+    "answer": 0,
+    "hint": "Assumes no relationship or difference exists.",
+    "subject": "Statistics",
+    "source": "papers/2024_hypothesis_testing.html"
+  },
+  {
+    "id": "q2024_063",
+    "year": 2024,
+    "question": "The concept of 'Alienation' in sociology is associated with?",
+    "options": ["Max Weber", "Karl Marx", "Emile Durkheim", "Georg Simmel"],
+    "answer": 1,
+    "hint": "Worker's estrangement from product of labor.",
+    "subject": "Sociology",
+    "source": "papers/2024_marxist_theory.html"
+  },
+  {
+    "id": "q2024_064",
+    "year": 2024,
+    "question": "In computer science, what is 'Recursion'?",
+    "options": ["Loop structure", "Function calling itself", "Data storage method", "Network protocol"],
+    "answer": 1,
+    "hint": "Problem-solving technique using self-reference.",
+    "subject": "Computer Science",
+    "source": "papers/2024_programming_concepts.html"
+  },
+  {
+    "id": "q2024_065",
+    "year": 2024,
+    "question": "The 'Aesthetic Theory' was developed by?",
+    "options": ["Immanuel Kant", "Georg Hegel", "Theodor Adorno", "Walter Benjamin"],
+    "answer": 2,
+    "hint": "Frankfurt School philosopher's work on art and society.",
+    "subject": "Philosophy",
+    "source": "papers/2024_aesthetic_theory.html"
+  },
+ [
+  {
+    "id": "q2024_064",
+    "year": 2024,
+    "question": "In computer science, what is 'Recursion'?",
+    "options": ["Loop structure", "Function calling itself", "Data storage method", "Network protocol"],
+    "answer": 1,
+    "hint": "Problem-solving technique using self-reference.",
+    "subject": "Computer Science",
+    "source": "papers/2024_programming_concepts.html"
+  },
+  {
+    "id": "q2024_065",
+    "year": 2024,
+    "question": "The 'Aesthetic Theory' was developed by?",
+    "options": ["Immanuel Kant", "Georg Hegel", "Theodor Adorno", "Walter Benjamin"],
+    "answer": 2,
+    "hint": "Frankfurt School philosopher's work on art and society.",
+    "subject": "Philosophy",
+    "source": "papers/2024_aesthetic_theory.html"
+  },
+  {
+    "id": "q2024_066",
+    "year": 2024,
+    "question": "Who is considered the father of Political Science?",
+    "options": ["Plato", "Aristotle", "Machiavelli", "Hobbes"],
+    "answer": 1,
+    "hint": "Ancient Greek philosopher who wrote 'Politics'.",
+    "subject": "Political Science",
+    "source": "papers/2024_political_theory.html"
+  },
+  {
+    "id": "q2024_067",
+    "year": 2024,
+    "question": "The concept of 'Social Contract' is associated with:",
+    "options": ["John Locke", "Thomas Hobbes", "Jean-Jacques Rousseau", "All of the above"],
+    "answer": 3,
+    "hint": "Multiple theorists developed variations of this concept.",
+    "subject": "Political Science",
+    "source": "papers/2024_social_contract_theory.html"
+  },
+  {
+    "id": "q2024_068",
+    "year": 2024,
+    "question": "Which article of the Indian Constitution deals with the Right to Equality?",
+    "options": ["Article 12", "Article 14", "Article 19", "Article 21"],
+    "answer": 1,
+    "hint": "Guarantees equality before law and equal protection of laws.",
+    "subject": "Political Science",
+    "source": "papers/2024_indian_constitution.html"
+  },
+  {
+    "id": "q2024_069",
+    "year": 2024,
+    "question": "The term 'Sovereignty' was first systematically analyzed by:",
+    "options": ["Jean Bodin", "Hugo Grotius", "Thomas Hobbes", "John Austin"],
+    "answer": 0,
+    "hint": "French jurist who wrote 'Six Books of the Commonwealth'.",
+    "subject": "Political Science",
+    "source": "papers/2024_sovereignty_theory.html"
+  },
+  {
+    "id": "q2024_070",
+    "year": 2024,
+    "question": "Which of the following is NOT a feature of Democracy?",
+    "options": ["Popular sovereignty", "Political equality", "Hereditary rule", "Majority rule"],
+    "answer": 2,
+    "hint": "Democracy is based on elected, not inherited, leadership.",
+    "subject": "Political Science",
+    "source": "papers/2024_democratic_theory.html"
+  },
+  {
+    "id": "q2024_071",
+    "year": 2024,
+    "question": "The concept of 'Separation of Powers' was developed by:",
+    "options": ["John Locke", "Montesquieu", "Jean Bodin", "James Madison"],
+    "answer": 1,
+    "hint": "French political philosopher who wrote 'The Spirit of Laws'.",
+    "subject": "Political Science",
+    "source": "papers/2024_separation_powers.html"
+  },
+  {
+    "id": "q2024_072",
+    "year": 2024,
+    "question": "Which Schedule of the Indian Constitution contains the list of languages?",
+    "options": ["Seventh Schedule", "Eighth Schedule", "Ninth Schedule", "Tenth Schedule"],
+    "answer": 1,
+    "hint": "Currently contains 22 official languages of India.",
+    "subject": "Political Science",
+    "source": "papers/2024_constitutional_schedules.html"
+  },
+  {
+    "id": "q2024_073",
+    "year": 2024,
+    "question": "The book 'The Prince' was written by:",
+    "options": ["Niccolò Machiavelli", "Thomas More", "Francesco Guicciardini", "Baldassare Castiglione"],
+    "answer": 0,
+    "hint": "Italian Renaissance political theorist known for realpolitik.",
+    "subject": "Political Science",
+    "source": "papers/2024_renaissance_political_thought.html"
+  },
+  {
+    "id": "q2024_074",
+    "year": 2024,
+    "question": "Which form of government is characterized by rule by the wealthy?",
+    "options": ["Aristocracy", "Plutocracy", "Oligarchy", "Meritocracy"],
+    "answer": 1,
+    "hint": "From Greek 'ploutos' meaning wealth.",
+    "subject": "Political Science",
+    "source": "papers/2024_forms_of_government.html"
+  },
+  {
+    "id": "q2024_075",
+    "year": 2024,
+    "question": "The Fundamental Duties in the Indian Constitution were added by which amendment?",
+    "options": ["42nd Amendment", "44th Amendment", "52nd Amendment", "61st Amendment"],
+    "answer": 0,
+    "hint": "Added during Emergency period in 1976.",
+    "subject": "Political Science",
+    "source": "papers/2024_constitutional_amendments.html"
+  },
+  {
+    "id": "q2024_076",
+    "year": 2024,
+    "question": "Who propounded the theory of 'Checks and Balances'?",
+    "options": ["Alexander Hamilton", "James Madison", "Thomas Jefferson", "Benjamin Franklin"],
+    "answer": 1,
+    "hint": "Primary architect of the US Constitution.",
+    "subject": "Political Science",
+    "source": "papers/2024_american_political_theory.html"
+  },
+  {
+    "id": "q2024_077",
+    "year": 2024,
+    "question": "The concept of 'Civil Disobedience' was popularized by:",
+    "options": ["Henry David Thoreau", "Mahatma Gandhi", "Martin Luther King Jr.", "All of the above"],
+    "answer": 3,
+    "hint": "Concept developed and practiced by multiple leaders.",
+    "subject": "Political Science",
+    "source": "papers/2024_civil_disobedience.html"
+  },
+  {
+    "id": "q2024_078",
+    "year": 2024,
+    "question": "Which article empowers the President to promulgate ordinances?",
+    "options": ["Article 121", "Article 123", "Article 213", "Article 356"],
+    "answer": 1,
+    "hint": "Presidential power when Parliament is not in session.",
+    "subject": "Political Science",
+    "source": "papers/2024_presidential_powers.html"
+  },
+  {
+    "id": "q2024_079",
+    "year": 2024,
+    "question": "The theory of 'Divine Right of Kings' was challenged by:",
+    "options": ["John Locke", "Thomas Hobbes", "Jean Bodin", "Robert Filmer"],
+    "answer": 0,
+    "hint": "English philosopher who wrote 'Two Treatises of Government'.",
+    "subject": "Political Science",
+    "source": "papers/2024_divine_right_theory.html"
+  },
+  {
+    "id": "q2024_080",
+    "year": 2024,
+    "question": "Which country is considered the birthplace of parliamentary democracy?",
+    "options": ["France", "United States", "United Kingdom", "Greece"],
+    "answer": 2,
+    "hint": "Westminster system originated here.",
+    "subject": "Political Science",
+    "source": "papers/2024_parliamentary_system.html"
+  },
+  {
+    "id": "q2024_081",
+    "year": 2024,
+    "question": "The Preamble of the Indian Constitution declares India as:",
+    "options": ["Socialist, Secular, Democratic Republic", "Sovereign, Socialist, Secular, Democratic Republic", "Federal, Democratic Republic", "Parliamentary Democracy"],
+    "answer": 1,
+    "hint": "Socialist and Secular were added by 42nd Amendment.",
+    "subject": "Political Science",
+    "source": "papers/2024_preamble_analysis.html"
+  },
+  {
+    "id": "q2024_082",
+    "year": 2024,
+    "question": "Who wrote 'A Theory of Justice'?",
+    "options": ["Robert Nozick", "John Rawls", "Michael Sandel", "Ronald Dworkin"],
+    "answer": 1,
+    "hint": "Harvard philosopher who proposed the 'veil of ignorance'.",
+    "subject": "Political Science",
+    "source": "papers/2024_theory_of_justice.html"
+  },
+  {
+    "id": "q2024_083",
+    "year": 2024,
+    "question": "The concept of 'General Will' was propounded by:",
+    "options": ["Voltaire", "Montesquieu", "Jean-Jacques Rousseau", "Denis Diderot"],
+    "answer": 2,
+    "hint": "Author of 'The Social Contract'.",
+    "subject": "Political Science",
+    "source": "papers/2024_general_will_theory.html"
+  },
+  {
+    "id": "q2024_084",
+    "year": 2024,
+    "question": "Which part of the Indian Constitution deals with Directive Principles?",
+    "options": ["Part II", "Part III", "Part IV", "Part V"],
+    "answer": 2,
+    "hint": "Non-justiciable principles for governance.",
+    "subject": "Political Science",
+    "source": "papers/2024_directive_principles.html"
+  },
+  {
+    "id": "q2024_085",
+    "year": 2024,
+    "question": "The term 'Liberalism' is associated with:",
+    "options": ["Individual freedom", "Limited government", "Rule of law", "All of the above"],
+    "answer": 3,
+    "hint": "Political philosophy emphasizing individual rights.",
+    "subject": "Political Science",
+    "source": "papers/2024_liberal_theory.html"
+  },
+  {
+    "id": "q2024_086",
+    "year": 2024,
+    "question": "Who is known as the 'Father of International Law'?",
+    "options": ["Hugo Grotius", "Francisco de Vitoria", "Alberico Gentili", "Emmerich de Vattel"],
+    "answer": 0,
+    "hint": "Dutch jurist who wrote 'On the Law of War and Peace'.",
+    "subject": "Political Science",
+    "source": "papers/2024_international_law.html"
+  },
+  {
+    "id": "q2024_087",
+    "year": 2024,
+    "question": "The Rajya Sabha can be dissolved by:",
+    "options": ["President", "Prime Minister", "Speaker", "It cannot be dissolved"],
+    "answer": 3,
+    "hint": "Upper house is a permanent body with rotating membership.",
+    "subject": "Political Science",
+    "source": "papers/2024_rajya_sabha.html"
+  },
+  {
+    "id": "q2024_088",
+    "year": 2024,
+    "question": "Which political thinker advocated for the 'Withering Away of the State'?",
+    "options": ["Karl Marx", "Vladimir Lenin", "Friedrich Engels", "All of the above"],
+    "answer": 3,
+    "hint": "Core concept in Marxist theory of communism.",
+    "subject": "Political Science",
+    "source": "papers/2024_marxist_theory.html"
+  },
+  {
+    "id": "q2024_089",
+    "year": 2024,
+    "question": "The concept of 'Political Culture' was developed by:",
+    "options": ["Gabriel Almond", "Sidney Verba", "Lucian Pye", "All of the above"],
+    "answer": 3,
+    "hint": "Comparative politics scholars who studied civic culture.",
+    "subject": "Political Science",
+    "source": "papers/2024_political_culture.html"
+  },
+  {
+    "id": "q2024_090",
+    "year": 2024,
+    "question": "Which article provides for the establishment of Finance Commission?",
+    "options": ["Article 280", "Article 275", "Article 282", "Article 285"],
+    "answer": 0,
+    "hint": "Constitutional body for center-state financial relations.",
+    "subject": "Political Science",
+    "source": "papers/2024_finance_commission.html"
+  },
+  {
+    "id": "q2024_091",
+    "year": 2024,
+    "question": "The book 'Politics Among Nations' was written by:",
+    "options": ["Hans Morgenthau", "Kenneth Waltz", "Robert Keohane", "Joseph Nye"],
+    "answer": 0,
+    "hint": "Classical realist theorist of international relations.",
+    "subject": "Political Science",
+    "source": "papers/2024_realist_theory.html"
+  },
+  {
+    "id": "q2024_092",
+    "year": 2024,
+    "question": "Which amendment reduced the voting age from 21 to 18 years?",
+    "options": ["59th Amendment", "61st Amendment", "65th Amendment", "69th Amendment"],
+    "answer": 1,
+    "hint": "Enacted in 1988 to expand democratic participation.",
+    "subject": "Political Science",
+    "source": "papers/2024_voting_rights.html"
+  },
+  {
+    "id": "q2024_093",
+    "year": 2024,
+    "question": "The concept of 'Power Elite' was propounded by:",
+    "options": ["C. Wright Mills", "Robert Dahl", "Floyd Hunter", "G. William Domhoff"],
+    "answer": 0,
+    "hint": "American sociologist who studied concentrated power.",
+    "subject": "Political Science",
+    "source": "papers/2024_elite_theory.html"
+  },
+  {
+    "id": "q2024_094",
+    "year": 2024,
+    "question": "Which principle of federalism is followed in India?",
+    "options": ["Dual federalism", "Cooperative federalism", "Competitive federalism", "Asymmetric federalism"],
+    "answer": 1,
+    "hint": "Center and states work together in governance.",
+    "subject": "Political Science",
+    "source": "papers/2024_indian_federalism.html"
+  },
+  {
+    "id": "q2024_095",
+    "year": 2024,
+    "question": "Who wrote 'The Clash of Civilizations'?",
+    "options": ["Francis Fukuyama", "Samuel P. Huntington", "Zbigniew Brzezinski", "Henry Kissinger"],
+    "answer": 1,
+    "hint": "Harvard political scientist's post-Cold War theory.",
+    "subject": "Political Science",
+    "source": "papers/2024_civilization_theory.html"
+  },
+  {
+    "id": "q2024_096",
+    "year": 2024,
+    "question": "The Governor of a state is appointed by:",
+    "options": ["Chief Minister", "State Legislature", "President", "Prime Minister"],
+    "answer": 2,
+    "hint": "Constitutional head of state government.",
+    "subject": "Political Science",
+    "source": "papers/2024_governor_appointment.html"
+  },
+  {
+    "id": "q2024_097",
+    "year": 2024,
+    "question": "Which theory explains the origin of state through force?",
+    "options": ["Divine theory", "Social contract theory", "Force theory", "Evolutionary theory"],
+    "answer": 2,
+    "hint": "State emerged through conquest and coercion.",
+    "subject": "Political Science",
+    "source": "papers/2024_state_origin_theories.html"
+  },
+  {
+    "id": "q2024_098",
+    "year": 2024,
+    "question": "The concept of 'Hegemony' in international relations refers to:",
+    "options": ["Military dominance", "Economic leadership", "Cultural influence", "All of the above"],
+    "answer": 3,
+    "hint": "Comprehensive dominance in multiple spheres.",
+    "subject": "Political Science",
+    "source": "papers/2024_hegemony_theory.html"
+  },
+  {
+    "id": "q2024_099",
+    "year": 2024,
+    "question": "Which article deals with the procedure for amendment of Constitution?",
+    "options": ["Article 356", "Article 368", "Article 370", "Article 375"],
+    "answer": 1,
+    "hint": "Provides different procedures for different types of amendments.",
+    "subject": "Political Science",
+    "source": "papers/2024_constitutional_amendment.html"
+  },
+  {
+    "id": "q2024_100",
+    "year": 2024,
+    "question": "Who propounded the 'Iron Law of Oligarchy'?",
+    "options": ["Vilfredo Pareto", "Gaetano Mosca", "Robert Michels", "Max Weber"],
+    "answer": 2,
+    "hint": "German sociologist who studied organizational dynamics.",
+    "subject": "Political Science",
+    "source": "papers/2024_oligarchy_theory.html"
+  },
+  {
+    "id": "q2024_101",
+    "year": 2024,
+    "question": "The minimum age for becoming Prime Minister of India is:",
+    "options": ["25 years", "30 years", "35 years", "No minimum age"],
+    "answer": 0,
+    "hint": "Same as minimum age for Lok Sabha membership.",
+    "subject": "Political Science",
+    "source": "papers/2024_pm_qualifications.html"
+  },
+  {
+    "id": "q2024_102",
+    "year": 2024,
+    "question": "Which approach in political science emphasizes scientific methods?",
+    "options": ["Traditional approach", "Behavioral approach", "Post-behavioral approach", "Institutional approach"],
+    "answer": 1,
+    "hint": "Revolution in political science methodology in 1950s-60s.",
+    "subject": "Political Science",
+    "source": "papers/2024_political_methodology.html"
+  },
+  {
+    "id": "q2024_103",
+    "year": 2024,
+    "question": "The concept of 'Soft Power' was coined by:",
+    "options": ["Joseph Nye", "Robert Keohane", "Kenneth Waltz", "John Mearsheimer"],
+    "answer": 0,
+    "hint": "Harvard professor who distinguished it from hard power.",
+    "subject": "Political Science",
+    "source": "papers/2024_soft_power_theory.html"
+  },
+  {
+    "id": "q2024_104",
+    "year": 2024,
+    "question": "Which schedule contains provisions for anti-defection law?",
+    "options": ["Ninth Schedule", "Tenth Schedule", "Eleventh Schedule", "Twelfth Schedule"],
+    "answer": 1,
+    "hint": "Added by 52nd Amendment to prevent party switching.",
+    "subject": "Political Science",
+    "source": "papers/2024_anti_defection_law.html"
+  },
+  {
+    "id": "q2024_105",
+    "year": 2024,
+    "question": "The phrase 'Government of laws and not of men' is attributed to:",
+    "options": ["John Adams", "Thomas Jefferson", "James Madison", "Alexander Hamilton"],
+    "answer": 0,
+    "hint": "Second President of the United States.",
+    "subject": "Political Science",
+    "source": "papers/2024_rule_of_law.html"
+  }
+]
